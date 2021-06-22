@@ -1,46 +1,84 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <img alt="Logo" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624322652/letmeask/Logo_ieeew8.png">
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/helitonoliveiraa/letmeask.svg?color=%239055A2">
 
-## Available Scripts
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/helitonoliveiraa/letmeask.svg?color=%239055A2">
 
-In the project directory, you can run:
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/helitonoliveiraa/letmeask?color=%239055A2">
 
-### `yarn start`
+  <a href="https://www.linkedin.com/in/helitonoliveira/">
+    <img alt="Made by Héliton Oliveira" src="https://img.shields.io/badge/made%20by-Héliton Oliveira-%239055A2">
+  </a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  <a href="https://github.com/helitonoliveiraa/letmeask?/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/helitonoliveiraa/letmeask??color=%239055A2">
+  </a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  <a href="https://github.com/helitonoliveiraa/letmeask/stargazers" >
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/helitonoliveiraa/letmeask?style=social" />
+  </a>
+</p>
 
-### `yarn test`
+<p align="center">
+  <a href="#memo-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#wrench-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#arrowdown-download-the-project">Download the project</a>
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# :memo: About
 
-### `yarn build`
+This project is development during the `Next Level Week workshop` by [Rocketseat](https://rocketseat.com.br/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br />
 
-### `yarn eject`
+# :wrench: Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [React](https://pt-br.reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [react-icons](https://react-icons.github.io/react-icons/icons?name=ai)
+- [firebase](https://console.firebase.google.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## :hammer: Tecnologias utilizadas para desenvolvimento
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [eslint](https://eslint.org/)
+- [prettier](https://prettier.io/)
+- [editorConfig](https://editorconfig.org/)
+- [commitlint](https://commitlint.js.org/#/)
+- [commitizen](https://github.com/commitizen/cz-cli)
+- [husky](https://typicode.github.io/husky/#/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# :arrow_down: Download the project
 
-## Learn More
+⚠ You should have the fallow tools in your computer
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [nodejs](https://nodejs.org/en/).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [yarn](https://yarnpkg.com/) or [npm]() for you can install the all dependencies
+
+
+<br />
+
+Clone this project for your local machine:
+```bash
+# clone the project for your local machine
+$ git clone https://github.com/helitonoliveiraa/letmeask.git
+
+# access the folder of project
+$ cd letmeask
+
+# install all the dependencies of project
+$ yarn / npm install
+
+# run the project
+$ yarn / npm run
+```
+
+<br />
+
+<p align="center">Make with 💙 by <a href="https://www.linkedin.com/in/helitonoliveira/" target="_blank">Héliton Oliveira</a></p>
