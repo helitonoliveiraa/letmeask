@@ -1,16 +1,20 @@
+import { FormEvent, useState } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { FiLogIn } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../hooks/useAuth';
 import { Input } from '../../components/Input';
 
 import illustrationImg from '../../assets/illustration.svg';
 import logoImg from '../../assets/logo.svg';
 
 import * as S from './styles';
+import { database } from '../../services/firebase';
 
 export function Home(): JSX.Element {
+  const [roomCode, setRoomCode] = useState('');
+
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
 
@@ -20,10 +24,27 @@ export function Home(): JSX.Element {
         await signInWithGoogle();
       }
 
-      history.push('/room/new');
+      history.push('/rooms/new');
     } catch (err) {
       console.log(err);
     }
+  }
+
+  async function handleJoinRoom(event: FormEvent) {
+    event.preventDefault();
+
+    if (roomCode.trim() === '') {
+      return;
+    }
+
+    const roomRef = await database.ref(`rooms/${roomCode}`).get();
+
+    if (!roomRef.exists()) {
+      alert('Room does not exists.');
+      return;
+    }
+
+    history.push(`/rooms/${roomCode}`);
   }
 
   return (
@@ -45,10 +66,15 @@ export function Home(): JSX.Element {
             Crie sua sala com o Google
           </S.GoogleButton>
 
-          <form action="">
+          <form onSubmit={handleJoinRoom}>
             <span>ou entre em uma sala</span>
 
-            <Input type="text" placeholder="Digite o código da sala" />
+            <Input
+              type="text"
+              placeholder="Digite o código da sala"
+              value={roomCode}
+              onChange={event => setRoomCode(event.target.value)}
+            />
 
             <S.ComeInButton>
               <FiLogIn />
