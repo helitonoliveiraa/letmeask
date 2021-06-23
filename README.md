@@ -1,20 +1,20 @@
 <h1 align="center">
-  <img alt="Logo" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624322652/letmeask/Logo_ieeew8.png">
+  <img alt="Logo" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624410826/letmeask/Logo_bxv20u.svg">
 </h1>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/helitonoliveiraa/letmeask.svg?color=%239055A2">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/helitonoliveiraa/letmeask.svg?color=%23007991">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/helitonoliveiraa/letmeask.svg?color=%239055A2">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/helitonoliveiraa/letmeask.svg?color=%23007991">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/helitonoliveiraa/letmeask?color=%239055A2">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/helitonoliveiraa/letmeask?color=%23007991">
 
   <a href="https://www.linkedin.com/in/helitonoliveira/">
-    <img alt="Made by Héliton Oliveira" src="https://img.shields.io/badge/made%20by-Héliton Oliveira-%239055A2">
+    <img alt="Made by Héliton Oliveira" src="https://img.shields.io/badge/made%20by-Héliton Oliveira-%23007991">
   </a>
 
   <a href="https://github.com/helitonoliveiraa/letmeask?/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/helitonoliveiraa/letmeask??color=%239055A2">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/helitonoliveiraa/letmeask??color=%23007991">
   </a>
 
   <a href="https://github.com/helitonoliveiraa/letmeask/stargazers" >
@@ -29,6 +29,9 @@
   <a href="#arrowdown-download-the-project">Download the project</a>
 </p>
 
+
+  <img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624410827/letmeask/image_1_errunt.png" />
+
 # :memo: About
 
 This project is development during the `Next Level Week workshop` by [Rocketseat](https://rocketseat.com.br/)
@@ -41,7 +44,10 @@ This project is development during the `Next Level Week workshop` by [Rocketseat
 
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [styled-components](https://www.typescriptlang.org/)
+- [React-router-dom](https://www.typescriptlang.org/)
 - [react-icons](https://react-icons.github.io/react-icons/icons?name=ai)
+- [polished](https://react-icons.github.io/react-icons/icons?name=ai)
 - [firebase](https://console.firebase.google.com/)
 
 ## :hammer: Tecnologias utilizadas para desenvolvimento
