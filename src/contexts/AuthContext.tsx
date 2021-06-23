@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { createContext, ReactNode, useState } from 'react';
 import { auth, firebase } from '../services/firebase';
 
@@ -8,7 +8,7 @@ type User = {
   avatar: string;
 };
 
-type AuthContextData = {
+export type AuthContextData = {
   signInWithGoogle: () => Promise<void>;
   user: User | null;
 };
@@ -17,7 +17,7 @@ type AuthProviderProps = {
   children: ReactNode;
 };
 
-const AuthContext = createContext({} as AuthContextData);
+export const AuthContext = createContext({} as AuthContextData);
 
 export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
   const [user, setUser] = useState<User | null>(null);
@@ -69,10 +69,4 @@ export function AuthProvider({ children }: AuthProviderProps): JSX.Element {
       {children}
     </AuthContext.Provider>
   );
-}
-
-export function useAuth(): AuthContextData {
-  const context = useContext(AuthContext);
-
-  return context;
 }
