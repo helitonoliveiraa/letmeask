@@ -13,6 +13,7 @@ export default {
 
     danger: '#E73F5D',
     red: '#EA4335',
+    yellow: '#E9D985',
 
     background: '#F8F8F8',
     details: '#FEFEFE',
