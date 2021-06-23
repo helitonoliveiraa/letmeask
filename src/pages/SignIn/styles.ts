@@ -48,7 +48,7 @@ export const Banner = styled.aside`
   `}
 `;
 
-export const LoginContainer = styled.section`
+export const LoginContainer = styled.main`
   ${({ theme }) => css`
     height: 100vh;
 
