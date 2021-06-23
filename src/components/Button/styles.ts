@@ -19,8 +19,13 @@ export const Container = styled.button`
 
     transition: all 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${lighten(0.2, theme.colors.secondary)};
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     svg {
