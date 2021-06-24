@@ -39,11 +39,13 @@
     "no-undef": "off",
     "no-unused-vars":"off",
     "no-use-before-define": "off",
+    "react/jsx-one-expression-per-line": "off",
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
+    "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-duplicates": "off",
