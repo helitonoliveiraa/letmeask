@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { darken } from 'polished';
+// import { darken } from 'polished';
 import { Button } from '../../components/Button';
 
 export const Container = styled.div`
@@ -69,42 +69,41 @@ export const LoginContainer = styled.main`
         margin: 0 auto;
       }
 
+      strong {
+        margin-top: 5.6rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
+        color: ${theme.colors.black};
+      }
+
       form {
-        position: relative;
         display: flex;
         flex-direction: column;
         text-align: center;
 
-        padding-top: 4rem;
-        margin-top: 4rem;
-        border-top: 1px solid ${theme.colors.grayMedium};
+        margin-top: 2.4rem;
+      }
 
-        span {
-          position: absolute;
-          top: -1rem;
-          left: 20%;
-          right: 20%;
-          width: 60%;
-          background-color: ${theme.colors.background};
-          color: ${theme.colors.grayMedium};
-          align-self: center;
+      p {
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+        color: ${theme.colors.grayDark};
+
+        a {
+          color: ${theme.colors.primary};
+          text-decoration: underline;
+          margin-left: 0.4rem;
+
+          &:hover {
+            color: ${theme.colors.secondary};
+          }
         }
       }
     }
   `}
 `;
 
-export const GoogleButton = styled(Button)`
-  ${({ theme }) => css`
-    margin-top: 5.6rem;
-    background: ${theme.colors.red};
-
-    &:hover {
-      background: ${darken(0.1, theme.colors.red)};
-    }
-  `}
-`;
-
-export const ComeInButton = styled(Button)`
+export const CreateRoomButton = styled(Button)`
   margin-top: 1.6rem;
 `;

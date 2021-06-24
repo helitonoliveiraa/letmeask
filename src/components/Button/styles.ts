@@ -6,7 +6,7 @@ export const Container = styled.button`
     height: 5rem;
     border: none;
     border-radius: 0.8rem;
-    padding: 0 2rem;
+    padding: 0 3.2rem;
 
     background: ${theme.colors.secondary};
     color: ${theme.colors.details};
@@ -19,8 +19,13 @@ export const Container = styled.button`
 
     transition: all 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${lighten(0.2, theme.colors.secondary)};
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
 
     svg {

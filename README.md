@@ -36,7 +36,8 @@
 
 This project is development during the `Next Level Week workshop` by [Rocketseat](https://rocketseat.com.br/)
 
-
+## Functionality
+ - the user can make social login with google account.
 
 <br />
 
