@@ -37,6 +37,7 @@
     ],
     "operator-linebreak":"off",
     "arrow-parens": "off",
+    "indent":"off",
     "no-undef": "off",
     "no-unused-vars":"off",
     "no-use-before-define": "off",
@@ -46,6 +47,7 @@
     "@typescript-eslint/no-use-before-define": [
       "error"
     ],
+    "implicit-arrow-linebreak": "off",
     "react/jsx-curly-newline": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",

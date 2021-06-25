@@ -8,6 +8,8 @@ import { useRoom } from '../../hooks/useRoom';
 
 import { database } from '../../services/firebase';
 
+import placeholderAvatar from '../../assets/placeholder-avatar.png';
+
 import * as S from './styles';
 
 type RoomParams = {
@@ -89,7 +91,7 @@ export function Room(): JSX.Element {
             <S.InfoWrapper>
               {user ? (
                 <S.UserInfo>
-                  <img src={user.avatar} alt={user.name} />
+                  <img src={user.avatar || placeholderAvatar} alt={user.name} />
                   <strong>{user.name}</strong>
                 </S.UserInfo>
               ) : (

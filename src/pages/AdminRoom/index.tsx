@@ -35,6 +35,19 @@ export function AdminRoom(): JSX.Element {
     history.push('/');
   }
 
+  async function handleCheckQuestionAsAnswered(questionId: string) {
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isAnswered: true,
+    });
+  }
+
+  async function handleHighLightQuestion(questionId: string) {
+    console.log('hightlight!');
+    await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+      isHighlighted: true,
+    });
+  }
+
   return (
     <>
       <Header roomId={roomId} endRoom={handleEndRoom} />
@@ -57,6 +70,8 @@ export function AdminRoom(): JSX.Element {
                 question={question}
                 roomId={roomId}
                 deleteQuestion={handleDeleteQuestion}
+                checkQuestion={handleCheckQuestionAsAnswered}
+                hightLightQuestion={handleHighLightQuestion}
               />
             ))}
         </S.ContentBody>
