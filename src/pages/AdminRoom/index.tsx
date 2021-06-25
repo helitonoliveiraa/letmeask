@@ -1,9 +1,7 @@
-import { FormEvent, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 import { Header } from '../../components/Header';
 import { Question as QuestionComponent } from '../../components/Question';
-import { useAuth } from '../../hooks/useAuth';
 import { useRoom } from '../../hooks/useRoom';
 
 import { database } from '../../services/firebase';
@@ -15,8 +13,8 @@ type RoomParams = {
 };
 
 export function AdminRoom(): JSX.Element {
-  const { user } = useAuth();
   const params = useParams<RoomParams>();
+  const history = useHistory();
 
   const roomId = params.id;
   const { questions, title } = useRoom(roomId);
@@ -29,9 +27,17 @@ export function AdminRoom(): JSX.Element {
     }
   }
 
+  async function handleEndRoom() {
+    await database.ref(`rooms/${roomId}`).update({
+      closedAt: new Date(),
+    });
+
+    history.push('/');
+  }
+
   return (
     <>
-      <Header roomId={roomId} />
+      <Header roomId={roomId} endRoom={handleEndRoom} />
       <S.Container>
         <S.ContentHeader>
           <h1>Sala {title}</h1>
