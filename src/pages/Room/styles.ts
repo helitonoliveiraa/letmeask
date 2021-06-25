@@ -29,7 +29,7 @@ export const ContentHeader = styled.section`
       font-size: 1.4rem;
       font-weight: 500;
       color: ${theme.colors.background};
-      background: ${theme.colors.primary};
+      background: ${lighten(0.15, theme.colors.primary)};
       border-radius: 5rem;
     }
   `}
@@ -41,6 +41,7 @@ export const ContentBody = styled.section`
 
     form {
       margin-top: 2.4rem;
+      margin-bottom: 3.2rem;
 
       textarea {
         width: 100%;
