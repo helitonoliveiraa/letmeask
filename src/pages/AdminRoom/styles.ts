@@ -36,44 +36,8 @@ export const ContentHeader = styled.section`
 `;
 
 export const ContentBody = styled.section`
-  ${({ theme }) => css`
-    width: 100%;
-
-    form {
-      margin-top: 2.4rem;
-      margin-bottom: 3.2rem;
-
-      textarea {
-        width: 100%;
-        padding: 1.6rem;
-        border: none;
-        border-radius: 0.8rem;
-        background: ${theme.colors.details};
-        box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.04);
-        font-size: 1.6rem;
-        color: ${theme.colors.primary};
-        line-height: 2.4;
-        resize: vertical;
-        min-height: 13rem;
-
-        &::placeholder {
-          font-size: 1.6rem;
-          color: ${theme.colors.grayDark};
-        }
-
-        &:focus {
-          border: 2px solid ${theme.colors.primary};
-          padding: 1.4rem;
-        }
-
-        outline-color: ${theme.colors.primary};
-        -moz-outline-radius: 0.8rem;
-      }
-
-      div {
-      }
-    }
-  `}
+  width: 100%;
+  margin-top: 2.4rem;
 `;
 
 export const InfoWrapper = styled.div`

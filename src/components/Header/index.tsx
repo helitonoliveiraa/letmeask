@@ -1,3 +1,5 @@
+import { useLocation } from 'react-router-dom';
+
 import logoImg from '../../assets/logo.svg';
 import { RoomCode } from '../RoomCode';
 
@@ -5,9 +7,14 @@ import * as S from './styles';
 
 type HeaderProps = {
   roomId: string;
+  endRoom?: () => void;
 };
 
-export function Header({ roomId }: HeaderProps): JSX.Element {
+export function Header({ roomId, endRoom }: HeaderProps): JSX.Element {
+  const { pathname } = useLocation();
+
+  const isAdmin = pathname === `/admin/rooms/${roomId}`;
+
   return (
     <S.Container>
       <S.Content>
@@ -16,7 +23,11 @@ export function Header({ roomId }: HeaderProps): JSX.Element {
         <div>
           <RoomCode code={roomId} />
 
-          <S.SignOutRoomButton>Encerrar sala</S.SignOutRoomButton>
+          {isAdmin && (
+            <S.SignOutRoomButton onClick={endRoom}>
+              Encerrar sala
+            </S.SignOutRoomButton>
+          )}
         </div>
       </S.Content>
     </S.Container>
