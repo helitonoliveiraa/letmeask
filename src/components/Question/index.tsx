@@ -26,6 +26,8 @@ type QuestionProps = {
   roomId?: string;
   likeQuestion?: (questionId: string, likeId: string | undefined) => void;
   deleteQuestion?: (questionId: string) => void;
+  checkQuestion?: (questionId: string) => void;
+  hightLightQuestion?: (questionId: string) => void;
 };
 
 export function Question({
@@ -33,29 +35,53 @@ export function Question({
   roomId,
   likeQuestion,
   deleteQuestion,
+  checkQuestion,
+  hightLightQuestion,
 }: QuestionProps): JSX.Element {
   const { pathname } = useLocation();
 
   const isAdmin = pathname === `/admin/rooms/${roomId}`;
 
   return isAdmin ? (
-    <S.Container>
+    <S.Container
+      isHightLight={question.isHighlighted}
+      isAnswered={question.isAnswered}
+    >
       <p>{question.content}</p>
 
-      <S.Footer>
+      <S.Footer
+        isHightLight={question.isHighlighted}
+        isAnswered={question.isAnswered}
+      >
         <div>
           <img src={question.author.avatar} alt={question.author.name} />
-          <strong>{question.author.name}</strong>
+          <span>{question.author.name}</span>
         </div>
 
-        <S.WrapperButton>
-          <button type="button">
+        <S.WrapperButton
+          isHightLight={question.isHighlighted}
+          isAnswered={question.isAnswered}
+        >
+          <button
+            type="button"
+            disabled={question.isAnswered}
+            className="check"
+            onClick={() => checkQuestion && checkQuestion(question.id)}
+          >
             <FiCheckCircle />
           </button>
 
-          <button type="button">
-            <FiMessageSquare />
-          </button>
+          {!question.isAnswered && (
+            <button
+              type="button"
+              className="hightlight"
+              onClick={() =>
+                hightLightQuestion && hightLightQuestion(question.id)
+              }
+            >
+              <FiMessageSquare />
+            </button>
+          )}
 
           <button
             type="button"
@@ -68,28 +94,37 @@ export function Question({
       </S.Footer>
     </S.Container>
   ) : (
-    <S.Container>
+    <S.Container
+      isHightLight={question.isHighlighted}
+      isAnswered={question.isAnswered}
+    >
       <p>{question.content}</p>
 
-      <S.Footer>
+      <S.Footer
+        isHightLight={question.isHighlighted}
+        isAnswered={question.isAnswered}
+      >
         <div>
           <img src={question.author.avatar} alt={question.author.name} />
-          <strong>{question.author.name}</strong>
+          <span>{question.author.name}</span>
         </div>
 
-        <div>
+        <S.UserbuttonContainer>
           {question.likesCount > 0 && <span>{question.likesCount}</span>}
-          <button
-            type="button"
-            onClick={() =>
-              // eslint-disable-next-line implicit-arrow-linebreak
-              likeQuestion && likeQuestion(question.id, question.likeId)
-            }
-            className={question.likeId ? 'liked' : ''}
-          >
-            <FiThumbsUp />
-          </button>
-        </div>
+
+          {!question.isAnswered && (
+            <button
+              type="button"
+              onClick={() =>
+                // eslint-disable-next-line implicit-arrow-linebreak
+                likeQuestion && likeQuestion(question.id, question.likeId)
+              }
+              className={question.likeId ? 'liked' : ''}
+            >
+              <FiThumbsUp />
+            </button>
+          )}
+        </S.UserbuttonContainer>
       </S.Footer>
     </S.Container>
   );
