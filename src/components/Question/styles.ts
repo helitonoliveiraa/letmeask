@@ -20,6 +20,16 @@ export const Container = styled.section`
   `}
 `;
 
+const buttonStyled = css`
+  border: none;
+  border-radius: 0.8rem;
+  background: transparent;
+  margin-left: 0.8rem;
+  padding: 0.4rem;
+
+  transition: all 0.1s ease-in-out;
+`;
+
 export const Footer = styled.footer`
   ${({ theme }) => css`
     margin-top: 2.4rem;
@@ -56,13 +66,7 @@ export const Footer = styled.footer`
       }
 
       button {
-        border: none;
-        border-radius: 0.8rem;
-        background: transparent;
-        margin-left: 0.8rem;
-        padding: 0.4rem;
-
-        transition: all 0.1s ease-in-out;
+        ${buttonStyled}
 
         svg {
           width: 2.4rem;
@@ -81,6 +85,45 @@ export const Footer = styled.footer`
 
           svg {
             color: ${theme.colors.primary};
+          }
+        }
+      }
+    }
+  `}
+`;
+
+export const WrapperButton = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+
+    button {
+      ${buttonStyled}
+
+      svg {
+        width: 2.4rem;
+        height: 2.4rem;
+        color: ${theme.colors.grayDark};
+      }
+
+      &:hover {
+        background: ${lighten(0.55, theme.colors.primary)};
+
+        svg {
+          color: ${theme.colors.primary};
+        }
+      }
+
+      &.delete {
+        svg {
+          color: ${theme.colors.grayDark};
+        }
+
+        &:hover {
+          background: ${lighten(0.35, theme.colors.danger)};
+
+          svg {
+            color: ${theme.colors.danger};
           }
         }
       }
