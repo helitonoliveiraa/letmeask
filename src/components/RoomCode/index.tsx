@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom';
 import { FiCopy } from 'react-icons/fi';
 
 import * as S from './styles';

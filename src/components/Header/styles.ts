@@ -1,4 +1,6 @@
+import { lighten } from 'polished';
 import styled, { css } from 'styled-components';
+import { Button } from '../Button';
 
 export const Container = styled.header`
   ${({ theme }) => css`
@@ -29,7 +31,7 @@ export const Content = styled.div`
   }
 `;
 
-export const SignOutRoomButton = styled.button`
+export const SignOutRoomButton = styled(Button)`
   ${({ theme }) => css`
     height: 4rem;
     padding: 0 2.4rem;
@@ -38,9 +40,12 @@ export const SignOutRoomButton = styled.button`
     border: 1px solid ${theme.colors.primary};
     background: transparent;
 
-    display: flex;
-    align-items: center;
     color: ${theme.colors.primary};
     font-weight: 500;
+
+    &:not(:disabled):hover {
+      background: ${theme.colors.primary};
+      color: ${theme.colors.white};
+    }
   `}
 `;
