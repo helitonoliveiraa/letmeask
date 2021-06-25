@@ -25,12 +25,14 @@ type QuestionProps = {
   question: QuestionType;
   roomId?: string;
   likeQuestion?: (questionId: string, likeId: string | undefined) => void;
+  deleteQuestion?: (questionId: string) => void;
 };
 
 export function Question({
   question,
   roomId,
   likeQuestion,
+  deleteQuestion,
 }: QuestionProps): JSX.Element {
   const { pathname } = useLocation();
 
@@ -46,18 +48,23 @@ export function Question({
           <strong>{question.author.name}</strong>
         </div>
 
-        <div>
+        <S.WrapperButton>
           <button type="button">
             <FiCheckCircle />
           </button>
+
           <button type="button">
             <FiMessageSquare />
           </button>
 
-          <button type="button">
+          <button
+            type="button"
+            className="delete"
+            onClick={() => deleteQuestion && deleteQuestion(question.id)}
+          >
             <FiTrash />
           </button>
-        </div>
+        </S.WrapperButton>
       </S.Footer>
     </S.Container>
   ) : (
