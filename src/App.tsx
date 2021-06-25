@@ -5,7 +5,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import { Routes } from './routes';
 
 import GlobalStyle from './styles/global';
-import { light } from './styles/themes';
+import { light } from './styles/themes/index';
 
 function App(): JSX.Element {
   return (
