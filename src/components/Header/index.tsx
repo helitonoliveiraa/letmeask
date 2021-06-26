@@ -1,7 +1,9 @@
 import { useLocation } from 'react-router-dom';
 
-import logoImg from '../../assets/logo.svg';
+import { useTheme } from '../../hooks/useTheme';
 import { RoomCode } from '../RoomCode';
+import { ToggleButton } from '../ToggleButton';
+import { LogoLight, LogoDark } from '../../assets/index';
 
 import * as S from './styles';
 
@@ -12,13 +14,16 @@ type HeaderProps = {
 
 export function Header({ roomId, endRoom }: HeaderProps): JSX.Element {
   const { pathname } = useLocation();
+  const { theme } = useTheme();
 
   const isAdmin = pathname === `/admin/rooms/${roomId}`;
 
   return (
     <S.Container>
+      <ToggleButton />
+
       <S.Content>
-        <img src={logoImg} alt="Logo" />
+        {theme === 'light' ? <LogoDark /> : <LogoLight />}
 
         <div>
           <RoomCode code={roomId} />

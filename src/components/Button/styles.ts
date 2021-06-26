@@ -20,7 +20,7 @@ export const Container = styled.button`
     transition: all 0.2s;
 
     &:not(:disabled):hover {
-      background: ${lighten(0.2, theme.colors.secondary)};
+      background: ${lighten(0.1, theme.colors.secondary)};
     }
 
     &:disabled {

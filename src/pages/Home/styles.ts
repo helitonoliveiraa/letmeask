@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 import { darken } from 'polished';
 import { Button } from '../../components/Button';
 
@@ -7,6 +7,10 @@ export const Container = styled.div`
   height: 100vh;
 
   display: flex;
+
+  @media (max-width: 870px) {
+    flex-direction: column;
+  }
 `;
 
 export const Banner = styled.aside`
@@ -18,6 +22,8 @@ export const Banner = styled.aside`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    position: relative;
 
     padding-left: 8.4rem;
 
@@ -45,7 +51,72 @@ export const Banner = styled.aside`
       opacity: 0.7;
       ${theme.colors.background};
     }
+
+    @media (max-width: 870px) {
+      max-width: 100%;
+      height: auto;
+      flex: 0.5;
+      padding: 2rem 8.4rem;
+
+      img {
+        max-width: 20rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      flex: 0.4;
+      padding: 0 2rem;
+
+      strong {
+        margin-top: 0.8rem;
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        max-width: 30rem;
+        position: absolute;
+        text-align: right;
+        top: 4rem;
+        right: 2rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        max-width: 42rem;
+        max-width: 28rem;
+        position: absolute;
+        text-align: right;
+        top: 14rem;
+        right: 2rem;
+      }
+
+      img {
+        max-width: 15rem;
+      }
+    }
   `}
+`;
+
+const APPEAR_FROM_TOP = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const APPEAR_FROM_RIGHT = keyframes`
+  from {
+    opacity: 0;
+    transform: translatex(5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
 
 export const LoginContainer = styled.main`
@@ -64,9 +135,13 @@ export const LoginContainer = styled.main`
       flex-direction: column;
       text-align: center;
 
-      img {
+      animation: ${APPEAR_FROM_RIGHT} 1s ease-in-out;
+
+      > svg {
         max-width: 154px;
         margin: 0 auto;
+
+        animation: ${APPEAR_FROM_TOP} 1s ease-in-out;
       }
 
       form {
@@ -90,6 +165,13 @@ export const LoginContainer = styled.main`
           align-self: center;
         }
       }
+    }
+
+    @media (max-width: 500px) {
+      flex: 0.8;
+      height: 100%;
+      padding: 2rem 2rem 0;
+      align-items: start;
     }
   `}
 `;
@@ -122,6 +204,10 @@ export const GoogleButton = styled.button`
       height: 2.4rem;
       color: ${theme.colors.details};
       margin-right: 0.8rem;
+    }
+
+    @media (max-width: 500px) {
+      margin-top: 3rem;
     }
   `}
 `;

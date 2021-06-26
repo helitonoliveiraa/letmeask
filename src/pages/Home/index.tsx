@@ -3,20 +3,23 @@ import { FaGoogle } from 'react-icons/fa';
 import { FiLogIn } from 'react-icons/fi';
 import { useHistory } from 'react-router-dom';
 
+import { database } from '../../services/firebase';
 import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
 import { Input } from '../../components/Input';
+import { ToggleButton } from '../../components/ToggleButton';
 
 import illustrationImg from '../../assets/illustration.svg';
-import logoImg from '../../assets/logo.svg';
+import { LogoLight, LogoDark } from '../../assets/index';
 
 import * as S from './styles';
-import { database } from '../../services/firebase';
 
 export function Home(): JSX.Element {
   const [roomCode, setRoomCode] = useState('');
 
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
+  const { theme } = useTheme();
 
   async function handleCreateRoom() {
     try {
@@ -63,8 +66,9 @@ export function Home(): JSX.Element {
       </S.Banner>
 
       <S.LoginContainer>
+        <ToggleButton />
         <div>
-          <img src={logoImg} alt="Logo" />
+          {theme === 'light' ? <LogoDark /> : <LogoLight />}
 
           <S.GoogleButton onClick={handleCreateRoom}>
             <FaGoogle />

@@ -1,4 +1,3 @@
-import { lighten } from 'polished';
 import styled, { css } from 'styled-components';
 import { Button } from '../Button';
 
@@ -6,7 +5,7 @@ export const Container = styled.header`
   ${({ theme }) => css`
     width: 100%;
     height: 9rem;
-    border-bottom: 1px solid ${theme.colors.grayLight};
+    border-bottom: 1px solid ${theme.colors.headerLine};
   `}
 `;
 
@@ -21,7 +20,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  img {
+  svg {
     max-width: 10rem;
   }
 

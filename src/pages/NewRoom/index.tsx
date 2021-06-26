@@ -2,11 +2,13 @@ import { Link, useHistory } from 'react-router-dom';
 import { FormEvent, useState } from 'react';
 
 import { useAuth } from '../../hooks/useAuth';
+import { useTheme } from '../../hooks/useTheme';
 import { Input } from '../../components/Input';
+import { ToggleButton } from '../../components/ToggleButton';
 import { database } from '../../services/firebase';
 
 import illustrationImg from '../../assets/illustration.svg';
-import logoImg from '../../assets/logo.svg';
+import { LogoLight, LogoDark } from '../../assets/index';
 
 import * as S from './styles';
 
@@ -15,6 +17,7 @@ export function NewRoom(): JSX.Element {
 
   const history = useHistory();
   const { user } = useAuth();
+  const { theme } = useTheme();
 
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
@@ -44,8 +47,9 @@ export function NewRoom(): JSX.Element {
       </S.Banner>
 
       <S.LoginContainer>
+        <ToggleButton />
         <div>
-          <img src={logoImg} alt="Logo" />
+          {theme === 'light' ? <LogoDark /> : <LogoLight />}
 
           <strong>Crie uma nova sala</strong>
 

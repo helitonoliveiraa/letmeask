@@ -64,7 +64,7 @@ export const LoginContainer = styled.main`
       flex-direction: column;
       text-align: center;
 
-      img {
+      > svg {
         max-width: 154px;
         margin: 0 auto;
       }

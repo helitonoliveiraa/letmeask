@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.input`
   ${({ theme }) => css`
@@ -8,7 +9,7 @@ export const Container = styled.input`
     border-radius: 0.8rem;
     padding: 0 1.6rem;
     font-size: 1.6rem;
-    color: ${theme.colors.primary};
+    color: ${darken(0.2, theme.colors.primary)};
 
     &::placeholder {
       font-size: 1.6rem;
