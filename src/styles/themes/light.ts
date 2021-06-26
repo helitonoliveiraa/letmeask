@@ -1,8 +1,8 @@
 export default {
   colors: {
-    primary: '#007991',
-    secondary: '#222E50',
-    grandient: 'linear-gradient(#007991, #222e50)',
+    primary: '#45B295',
+    secondary: '#0273ED',
+    grandient: 'linear-gradient(#0273ED, #1A2741)',
 
     black: '#29292E',
     shadow: '#050206',
@@ -18,5 +18,10 @@ export default {
     background: '#F8F8F8',
     details: '#FEFEFE',
     white: '#FFFFFF',
+
+    headerLine: '#DBDCDD',
   },
 };
+
+// 'linear-gradient(#007991, #222e50)',
+// #56F2C3
