@@ -18,7 +18,7 @@
   </a>
 
   <a href="https://github.com/helitonoliveiraa/letmeask/stargazers" >
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/helitonoliveiraa/letmeask?style=social" />
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/helitonoliveiraa/letmeask?style=social" width="" />
   </a>
 </p>
 
@@ -30,9 +30,17 @@
 </p>
 
 
-  <img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624729217/letmeask/image_3_abidjh.png" />
+<img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624729217/letmeask/image_3_abidjh.png" />
 
-  <img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624729220/letmeask/image_4_hwkxdm.png" />
+<img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624729220/letmeask/image_4_hwkxdm.png" />
+
+<br />
+
+<p align="center">
+  <a href="https://letmeask-83619.web.app/" target="_blank">
+    <img alt="Banner" src="https://res.cloudinary.com/dzn5ixmhq/image/upload/v1624731078/Component_3_gyqpvi.png" width="200" />
+  </a>
+</p>
 
 # :memo: About
 
