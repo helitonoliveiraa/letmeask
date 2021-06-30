@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { createContext, ReactNode, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 
@@ -21,7 +22,19 @@ export const ThemeContext = createContext<ThemeContextType>(
 export function ThemeContextProvider({
   children,
 }: ThemeProviderProps): JSX.Element {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>(() => {
+    const storageTheme = localStorage.getItem('letmeask:theme');
+
+    if (storageTheme) {
+      return JSON.parse(storageTheme);
+    }
+
+    return 'light';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('letmeask:theme', JSON.stringify(theme));
+  }, [theme]);
 
   function toggleTheme() {
     setTheme(theme === 'light' ? 'dark' : 'light');
