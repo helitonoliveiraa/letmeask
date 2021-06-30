@@ -8,7 +8,6 @@ export const Container = styled.button`
     background: transparent;
     border: 1px solid ${theme.colors.primary};
     border-radius: 0.8rem;
-    margin-right: 0.8rem;
 
     strong {
       margin: 0 1.2rem;
@@ -35,6 +34,17 @@ export const Container = styled.button`
 
     &:hover {
       filter: brightness(0.8);
+    }
+
+    @media (max-width: 600px) {
+      max-width: 20rem;
+
+      strong {
+        max-width: 40%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
     }
   `}
 `;

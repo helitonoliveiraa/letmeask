@@ -66,7 +66,8 @@ export function Home(): JSX.Element {
       </S.Banner>
 
       <S.LoginContainer>
-        <ToggleButton />
+        <S.ToggleButtonStyled />
+
         <div>
           {theme === 'light' ? <LogoDark /> : <LogoLight />}
 
