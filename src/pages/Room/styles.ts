@@ -6,7 +6,7 @@ import { Button } from '../../components/Button';
 export const Container = styled.main`
   max-width: 820px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
   padding: 0 2rem;
 `;
 
