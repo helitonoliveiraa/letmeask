@@ -47,7 +47,7 @@ export function NewRoom(): JSX.Element {
       </S.Banner>
 
       <S.LoginContainer>
-        <ToggleButton />
+        <S.ToggleButtonStyled />
         <div>
           {theme === 'light' ? <LogoDark /> : <LogoLight />}
 

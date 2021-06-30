@@ -20,8 +20,6 @@ export default {
     white: '#FFFFFF',
 
     headerLine: '#DBDCDD',
+    backgrounDrawer: 'rgba(248, 248, 248, 0.9)',
   },
 };
-
-// 'linear-gradient(#007991, #222e50)',
-// #56F2C3

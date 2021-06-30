@@ -1,6 +1,18 @@
 import styled, { css, keyframes } from 'styled-components';
 import { darken } from 'polished';
 import { Button } from '../../components/Button';
+import { ToggleButton } from '../../components/ToggleButton';
+
+export const ToggleButtonStyled = styled(ToggleButton)`
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+
+  @media (max-width: 500px) {
+    top: 0.5rem;
+    right: 1.4rem;
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -128,6 +140,8 @@ export const LoginContainer = styled.main`
     align-items: center;
     justify-content: center;
 
+    position: relative;
+
     div {
       max-width: 320px;
       width: 100%;
@@ -165,6 +179,10 @@ export const LoginContainer = styled.main`
           align-self: center;
         }
       }
+    }
+
+    @media (max-width: 870px) {
+      position: static;
     }
 
     @media (max-width: 500px) {

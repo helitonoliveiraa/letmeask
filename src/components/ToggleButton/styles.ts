@@ -9,10 +9,6 @@ export const Container = styled.button`
     font-size: 0;
     background: transparent;
 
-    position: absolute;
-    top: 2rem;
-    right: 5rem;
-
     svg {
       width: 2.4rem;
       height: 2.4rem;
