@@ -10,6 +10,7 @@ const dark: typeof light = {
     grandient: 'linear-gradient(#252736, #252736)',
 
     headerLine: '#29292E',
+    backgrounDrawer: 'rgba(30, 29, 43, 0.95)',
   },
 };
 
